@@ -8,6 +8,7 @@ class DosenController extends Controller
 {
     //
     public function index(){
-        return "Halo ini adalah method index, dalam controller DosenController. - www.malasngoding.com";
+        $nama = "Diki Alfarabi Hadi";
+    	return view('biodata',['nama' => $nama]);
     }
 }

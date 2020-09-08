@@ -8,7 +8,9 @@ class DosenController extends Controller
 {
     //
     public function index(){
-        $nama = "Diki Alfarabi Hadi";
-    	return view('biodata',['nama' => $nama]);
+        public function index(){
+            $nama = "Diki Alfarabi Hadi";
+            return view('biodata',['nama' => $nama]);
+        }
     }
 }

@@ -8,7 +8,7 @@ class DosenController extends Controller
 {
     //
     public function index(){
-        $nama = "Diki Alfarabi Hadi";
+        $nama = "Ilham Fahmi";
  
     	$pelajaran = ["Algoritma & Pemrograman","Kalkulus","Pemrograman Web"];
  

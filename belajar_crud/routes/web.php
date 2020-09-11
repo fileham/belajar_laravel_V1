@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about','PagesController@about');
+Route::get('/pegawai','App\Http\Controllers\PegawaiController@crud');

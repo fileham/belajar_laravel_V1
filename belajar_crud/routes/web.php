@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/pegawai','App\Http\Controllers\PegawaiController@crud');
+Route::get('/pegawai','App\Http\Controllers\PegawaiController@tambah');
+Route::post('/pegawai/store','App\Http\Controllers\PegawaiController@tambah');

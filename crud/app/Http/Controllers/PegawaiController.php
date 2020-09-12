@@ -58,4 +58,11 @@ class PegawaiController extends Controller
 			//alihkan halaman ke halaman pegawai
 			return redirect('/pegawai');
 		}
+		public function hapus($id){
+			//menghapus database berdasarkan id yang dipilih
+			DB::table('pegawai')->where('pegawai_id',$id)->delete();
+
+			//alihkan ke halaman pegawai
+			return redirect('/pegawai');
+		}
 }

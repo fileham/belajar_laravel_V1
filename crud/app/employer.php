@@ -8,4 +8,5 @@ class employer extends Model
 {
     //
     protected $table ="employer";
+    protected $fillable = ['nama','alamat'];
 }

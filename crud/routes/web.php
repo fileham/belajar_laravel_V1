@@ -32,3 +32,8 @@ Route::get('/input','MalasngodingController@input');
 Route::post('/proses','MalasngodingController@proses');
 
 Route::get('/employer','EmployerController@index');
+Route::get('/employer/tambah','EmployerController@tambah');
+Route::post('/employer/store','EmployerController@store');
+Route::get('/employer/edit/{id}', 'EmployerController@edit');
+Route::put('/employer/update/{id}', 'EmployerController@update');
+Route::get('/employer/hapus/{id}', 'EmployerController@delete');

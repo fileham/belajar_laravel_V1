@@ -23,11 +23,13 @@
 				<h3>Data Pegawai</h3>
 				
 				<p>Cari Data Pegawai</p>
-				<form action="/pegawai/cari" method="GET" class="form-inline">
-					<input class="form-control" type="text" name="cari" placeholder="Cari Pegawai.." value="{{old('cari')}}">
-					<input class="btn btn-primary ml-3" type="submit" value="CARI">
-				</form>
-
+				
+				<div class="form-group">			
+					<form action="/pegawai/cari" method="GET" class="form-inline">
+						<input class="form-control" type="text" name="cari" placeholder="Cari Pegawai.." value="{{old('cari')}}">
+						<input class="btn btn-primary ml-3" type="submit" value="CARI">
+					</form>
+				</div>
 				<table class="tbale table-bordered">
 					<tr>
 						<th>No</th>

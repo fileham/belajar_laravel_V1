@@ -15,7 +15,12 @@
 
 	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
 	<h3>Data Pegawai</h3>
-
+	
+	<p>Cari Data Pegawai</p>
+	<form action="/pegawai/cari" method="GET">
+		<input type="text" name="cari" placeholder="Cari Pegawai.." value="{{old('cari')}}">
+		<input type="submit" value="CARI">
+	</form>
 
 	<table border="1">
 		<tr>

@@ -26,12 +26,12 @@ class GuruController extends Controller
     }
      
      // restore data guru yang dihapus
-public function kembalikan($id)
-{
-    	$guru = Guru::onlyTrashed()->where('id',$id);
-    	$guru->restore();
-    	return redirect('/guru/trash');
-}
+    public function kembalikan($id)
+    {
+            $guru = Guru::onlyTrashed()->where('id',$id);
+            $guru->restore();
+            return redirect('/guru/trash');
+    }
 
     // restore semua data guru yang sudah dihapus
     public function kembalikan_semua()

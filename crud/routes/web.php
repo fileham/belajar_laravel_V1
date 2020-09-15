@@ -37,3 +37,11 @@ Route::post('/employer/store','EmployerController@store');
 Route::get('/employer/edit/{id}', 'EmployerController@edit');
 Route::put('/employer/update/{id}', 'EmployerController@update');
 Route::get('/employer/hapus/{id}', 'EmployerController@delete');
+
+Route::get('/guru', 'GuruController@index');
+Route::get('/guru/hapus/{id}', 'GuruController@hapus');
+Route::get('/guru/trash', 'GuruController@trash');
+Route::get('/guru/kembalikan/{id}', 'GuruController@kembalikan');
+Route::get('/guru/kembalikan_semua', 'GuruController@kembalikan_semua');
+Route::get('/guru/hapus_permanen/{id}', 'GuruController@hapus_permanen');
+Route::get('/guru/hapus_permanen_semua', 'GuruController@hapus_permanen_semua');

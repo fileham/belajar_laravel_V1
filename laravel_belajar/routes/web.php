@@ -33,3 +33,5 @@ Route::get('/blog/kontak', 'BlogController@kontak');
 
 //route CRUD
 Route::get('/pegawai','PegawaiController@index');
+
+Route::get('/pengguna', 'PenggunaController@index');

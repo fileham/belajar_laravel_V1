@@ -12,22 +12,16 @@ class PegawaiController extends Controller
     {
 		//pagination
 		$pegawai = DB::table('pegawai')->paginate(10);
-
     	// mengambil data dari table pegawai
     	//$pegawai = DB::table('pegawai')->get();
-
     	// mengirim data pegawai ke view index
     	return view('index',['pegawai' => $pegawai]);
-
 	}
-
 		// method untuk menampilkan view form tambah pegawai
 		public function tambah()
 		{
-		
 			// memanggil view tambah
 			return view('tambah');
-		
 		}
 
 		public function store(Request $request)

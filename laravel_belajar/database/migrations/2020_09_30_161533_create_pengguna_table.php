@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGuruTable extends Migration
+class CreatePenggunaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateGuruTable extends Migration
      */
     public function up()
     {
-        Schema::create('guru', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('pengguna', function (Blueprint $table) {
+            $table->id();
             $table->string('nama');
-            $table->text('umur');
             $table->timestamps();
-            $table->dateTime('deleted_at');
         });
     }
 
@@ -29,6 +27,6 @@ class CreateGuruTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guru');
+        Schema::dropIfExists('pengguna');
     }
 }

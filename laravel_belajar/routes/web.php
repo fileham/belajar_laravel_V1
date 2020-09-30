@@ -35,3 +35,4 @@ Route::get('/blog/kontak', 'BlogController@kontak');
 Route::get('/pegawai','PegawaiController@index');
 
 Route::get('/pengguna', 'PenggunaController@index');
+Route::get('/article', 'WebController@index');

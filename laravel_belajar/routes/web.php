@@ -37,3 +37,10 @@ Route::get('/pegawai','PegawaiController@index');
 Route::get('/pengguna', 'PenggunaController@index');
 Route::get('/article', 'WebController@index');
 Route::get('/anggota', 'DikiController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/enkripsi','IlhamController@enkripsi');

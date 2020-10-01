@@ -15,7 +15,7 @@ class CreateTeleponTable extends Migration
     {
         Schema::create('telepon', function (Blueprint $table) {
             $table->id();
-            $table->string('nomor_telepon',);
+            $table->string('nomor_telepon');
             $table->foreignId('pengguna_id')->references('id')->on('pengguna');
             $table->timestamps();
         });

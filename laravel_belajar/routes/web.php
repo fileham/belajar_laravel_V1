@@ -44,3 +44,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/enkripsi','IlhamController@enkripsi');
+Route::get('/hash','IlhamController@hash');
+
+Route::get('/upload', 'UploadController@upload');
+Route::post('/upload/proses', 'UploadController@proses_upload');

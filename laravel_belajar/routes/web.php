@@ -46,5 +46,8 @@ Auth::routes();
 Route::get('/enkripsi','IlhamController@enkripsi');
 Route::get('/hash','IlhamController@hash');
 
+//upload file
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@proses_upload');
+//hapus file
+Route::get('/upload/hapus/{id}', 'UploadController@hapus');

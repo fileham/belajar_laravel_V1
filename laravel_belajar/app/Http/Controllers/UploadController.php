@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Gambar;
+use File;
 
 class UploadController extends Controller
 {
@@ -15,7 +16,7 @@ class UploadController extends Controller
 
 	public function proses_upload(Request $request){
 		$this->validate($request, [
-			'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+			'file' => 'required|file|image|mimes:jpeg,png,gif,webp|max:2048',
 			'keterangan' => 'required',
 		]);
 
@@ -32,6 +33,17 @@ class UploadController extends Controller
 			'file' => $nama_file,
 			'keterangan' => $request->keterangan,
 		]);
+
+		return redirect()->back();
+	}
+
+	public function hapus($id){
+		// hapus file
+		$gambar = Gambar::where('id',$id)->first();
+		File::delete('data_file/'.$gambar->file);
+
+		// hapus data
+		Gambar::where('id',$id)->delete();
 
 		return redirect()->back();
 	}

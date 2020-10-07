@@ -46,5 +46,7 @@ class UploadController extends Controller
 		Gambar::where('id',$id)->delete();
 
 		return redirect()->back();
-	}
+    }
+
+
 }

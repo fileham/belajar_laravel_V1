@@ -51,3 +51,8 @@ Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@proses_upload');
 //hapus file
 Route::get('/upload/hapus/{id}', 'UploadController@hapus');
+
+//session
+Route::get('/session/tampil','TesController@tampilkanSession');
+Route::get('/session/buat','TesController@buatSession');
+Route::get('/session/hapus','TesController@hapusSession');

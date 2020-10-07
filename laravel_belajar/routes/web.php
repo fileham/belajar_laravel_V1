@@ -62,3 +62,6 @@ Route::get('/pesan','NotifController@index');
 Route::get('/pesan/sukses','NotifController@sukses');
 Route::get('/pesan/peringatan','NotifController@peringatan');
 Route::get('/pesan/gagal','NotifController@gagal');
+
+// error handling
+Route::get('/malasngoding','MalasngodingController@index');

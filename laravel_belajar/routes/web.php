@@ -56,3 +56,9 @@ Route::get('/upload/hapus/{id}', 'UploadController@hapus');
 Route::get('/session/tampil','TesController@tampilkanSession');
 Route::get('/session/buat','TesController@buatSession');
 Route::get('/session/hapus','TesController@hapusSession');
+
+//Session Flash
+Route::get('/pesan','NotifController@index');
+Route::get('/pesan/sukses','NotifController@sukses');
+Route::get('/pesan/peringatan','NotifController@peringatan');
+Route::get('/pesan/gagal','NotifController@gagal');

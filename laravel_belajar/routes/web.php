@@ -65,3 +65,4 @@ Route::get('/pesan/gagal','NotifController@gagal');
 
 // error handling
 Route::get('/malasngoding','MalasngodingController@index');
+Route::get('/kirimemail','MalasngodingController@index');

@@ -13,6 +13,7 @@ class MalasngodingController extends Controller
 	public function index(){
 
 		Mail::to("testing@malasngoding.com")->send(new MalasngodingEmail());
+
 		return "Email telah dikirim";
 
 	}

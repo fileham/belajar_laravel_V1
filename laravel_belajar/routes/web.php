@@ -66,3 +66,6 @@ Route::get('/pesan/gagal','NotifController@gagal');
 // error handling
 Route::get('/malasngoding','MalasngodingController@index');
 Route::get('/kirimemail','MalasngodingController@index');
+
+Auth::routes(['verify' => true]);
+Route::get('/home', 'HomeController@index')->name('home');

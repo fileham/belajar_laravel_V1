@@ -69,3 +69,9 @@ Route::get('/kirimemail','MalasngodingController@index');
 
 Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/cetak_pdf','PegawaiController@cetak_pdf');
+
+Route::get('/siswa', 'SiswaController@index');
+Route::get('/siswa/export_excel', 'SiswaController@export_excel');

@@ -3,19 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+
+use App\Pegawai;
+
+use PDF;
 
 class PegawaiController extends Controller
 {
-    public function index(){
-        return view('index');
+    public function index()
+    {
+    	$pegawai = Pegawai::all();
+    	return view('pegawai',['pegawai'=>$pegawai]);
     }
-    public function formulir(){
-        return view('formulir');
+
+    public function cetak_pdf()
+    {
+    	$pegawai = Pegawai::all();
+
+    	$pdf = PDF::loadview('pegawai_pdf',['pegawai'=>$pegawai]);
+    	return $pdf->download('laporan-pegawai.pdf');
     }
-    public function proses(Request $request){
-        $nama = $request->input('nama');
-     	$alamat = $request->input('alamat');
-        return "Nama : ".$nama.", Alamat : ".$alamat;
-}
 }
